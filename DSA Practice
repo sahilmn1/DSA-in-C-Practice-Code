@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  // pre-Increament
+  // int i,j,sum;
+  // i=10;
+  // j=1;
+  // ++i;
+  // sum=i+j;
+  // cout<<"The sum of the two number is : "<<sum;
+
+ // ---------This is the example of the post-Increament
+  int i, j, sum, sum1;
+  i = 9;
+  j = 2;
+  sum = i + j;
+  i++;
+  sum1 = i + j;
+  cout << "The sum of Two number : " << sum << endl;
+
+  cout << "The sum of Two number : " << sum1 << endl;
+
+
+
+
+	
+  return 0;
+}
