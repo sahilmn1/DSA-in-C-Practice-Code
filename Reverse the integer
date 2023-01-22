@@ -1,0 +1,25 @@
+//if i want to write the code for the reverse number in the entered number then we have to build a logic for that
+#include <iostream>
+#include <math.h>
+#include <climits>
+using namespace std;
+
+int main() {
+    
+    int n; 
+
+    cout<<"Enter the number : ";
+    
+    cin>>n;
+    int ans=0;
+    while(n !=0) {
+        int rem=n%10;
+        if( (ans > INT_MAX/10) || (ans < INT_MIN/10)){
+            cout<<"wrong input : ";
+        }
+        ans= (ans*10)+ rem;
+        
+        n = n/10;
+    }
+    cout<<"The ans is : "<<ans<<endl;
+}
