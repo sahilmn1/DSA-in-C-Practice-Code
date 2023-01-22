@@ -1,0 +1,23 @@
+
+#include <iostream>
+using namespace std;
+int isEven(int a) {
+    if(a&1){//this will check whether it is Even or Odd
+        return 0;
+    }
+    else {
+        return 1;
+    }
+  }
+// Here we call the Function and get the result!
+    int main() {
+        int num;
+        cout<<"Enter the number to see Jadoo!"<<endl;
+        cin>>num;
+        if(isEven(num)){
+            cout<<"Number is Even "<<endl;
+        }
+        else {
+            cout<<"Number is Odd."<<endl;
+        }
+    }
