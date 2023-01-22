@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+// this function will find the factorial of the number
+int factorial(int n)
+{
+    int fact = 1;
+    for (int i = 1; i <= n; i++)
+    {
+        fact = fact * i;
+    }
+    return fact;
+}
+// This Function will add the fomula into the nCr
+int nCr(int n, int r)
+{
+    int num = factorial(n);
+
+    int denom = factorial(r) * factorial(n - r);
+
+    return num / denom;
+}
+int main()
+{
+    int n, r;
+	cout<<"Enter the Two number to find the Factorial: ";
+    cin >> n >> r;
+// This will return the answer when we call to the function
+    cout << "Answer is : " << nCr(n, r) << endl;
+}
