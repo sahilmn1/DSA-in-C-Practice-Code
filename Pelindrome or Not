@@ -1,0 +1,56 @@
+#include <iostream>
+using namespace std;
+// we will  check Whether it is Palinrome or not 
+
+bool palindrome(char a[], int n){
+    int s=0;
+    int e=n-1;
+
+    while(s<=e){
+        if(a[s] != a[e]){
+            return 0;
+        }
+        else{
+            s++;
+            e--;
+        }
+    }
+    return 1;
+}
+// Here we will write the code to Reverse the array in c++
+
+int Reverse(char name[], int n){
+    int s=0;
+    int e=n-1;
+
+    while(s<e){
+        swap(name[s++], name[e--]);
+    } 
+}
+// this is the Function code to find the length of the array
+int Lengthofarray(char name[]){
+    int count =0;
+    for(int i=0; name[i]!='\0'; i++){
+        count++;
+    }   
+    return count;
+}
+int main()
+{
+    char Name[20];
+    cout << "Enter your Name : ";
+    cin >> Name;
+    cout << endl;
+
+    cout << "Your name is : " << Name<<endl;
+    int len=Lengthofarray(Name);
+    cout<<"Length of the Array is : "<<len;
+
+    Reverse(Name,len);
+    cout << endl;
+    cout << "Your name is : " << Name;
+    cout<<endl;
+    cout<<"It is palindrome or not : "<<palindrome(Name, len);
+
+    return 0;
+}
